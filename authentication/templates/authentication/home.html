@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'authentication/css/homestyles.css' %}">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar">
+            <!-- <img class="logo" src="logo.png"> -->
+            <ul>
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </nav>
+        <div class="center">
+            <h1>CRQR</h1>
+            <h2>
+                Customer Review QR revolutionizes feedback by connecting customers and businesses.
+                Share experiences, empower businesses with genuine insights,
+                and be part of a transparent, user-friendly platform.
+            </h2>
+            <h3>
+                Their voice, your success! 
+            </h3>
+            <div class="buttons">
+                <a href="{% url 'authentication:login' %}"><button>Login</button></a>
+            </div>
+            <div class="buttons">
+                <a href="{% url 'authentication:register' %}"><button>Sign-up</button></a></button>
+            </div>
+
+        </div>
+</body>
+
+</html>

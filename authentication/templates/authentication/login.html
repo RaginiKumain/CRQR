@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'authentication/css/loginstyles.css' %}">
+        
+</head>
+<body>
+    
+    <form  action="{% url 'authentication:login' %}" method="post">
+        {% csrf_token %}
+        <h1>Login</h1>
+        
+        <label for="{{ form.username.id_for_label }}">Username:</label>
+        {{ form.username }}
+        <label for="{{ form.password.id_for_label }}">Password:</label>
+        {{ form.password }}
+        <br>
+        <br>
+        <button type="submit">Login</button>
+        <div class="signup_link">
+            Not a Member? <a href="{% url 'authentication:register' %}">Signup</a>
+        </div>
+    </form>
+</body>
+</html>
+
