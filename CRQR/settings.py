@@ -36,6 +36,7 @@ AUTH_USER_MODEL = 'authentication.CustomUser'
 # Application definition
 
 INSTALLED_APPS = [
+    'qrgenerator',
     'authentication',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -68,7 +69,8 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'authentication', 'templates'),
-            BASE_DIR / 'templates',
+            os.path.join(BASE_DIR, 'qrgenerator', 'templates'),
+            
         ],
         'APP_DIRS': True,
         'OPTIONS': {
